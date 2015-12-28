@@ -5,4 +5,8 @@ class Song
     @title = title
     @artist = artist
   end
+  
+  def to_s
+    "Title: #{@title} - Artist: #{@artist}"
+  end
 end
