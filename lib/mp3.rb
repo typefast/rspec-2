@@ -8,4 +8,8 @@ class Mp3
   def add_song(song)
     @tracks[song.title] = song
   end
+  
+  def list_songs
+    @tracks.each {|title, artist| puts title }
+  end
 end

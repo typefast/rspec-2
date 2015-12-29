@@ -27,8 +27,10 @@ RSpec.describe Mp3 do
   
   describe "#list_songs" do 
     it "lists the title of each song" do 
+      
       @mp3.add_song(@song)
-      expect(@mp3.list_songs).to eq("Title")
+      expect { (@mp3.list_songs) }.to output("Title\n").to_stdout
+      
     end
   end
   
