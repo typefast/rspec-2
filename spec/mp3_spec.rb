@@ -1,6 +1,6 @@
 require 'mp3'
 
-Rspec.describe Mp3 do 
+RSpec.describe Mp3 do 
   
   before :each do 
     @mp3 = Mp3.new
@@ -8,7 +8,7 @@ Rspec.describe Mp3 do
   
   describe "#new" do 
     it "creates an instance of Mp3" do 
-      expect(mp3 = Mp3.new).to be_an_instance_of Mp3
+      expect(@mp3).to(be_an_instance_of(Mp3))
     end
   end
   
