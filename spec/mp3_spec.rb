@@ -1,8 +1,10 @@
+require 'song'
 require 'mp3'
 
 RSpec.describe Mp3 do 
   
   before :each do 
+    @song = Song.new("Title", "Artist")
     @mp3 = Mp3.new
   end 
   
@@ -15,5 +17,12 @@ RSpec.describe Mp3 do
       expect(@mp3.tracks).to eq({})
     end
   end
+  
+  describe "#add_song" do 
+    it "Adds a song to the mp3 tracks hash" do 
+      expect(@mp3.tracks).to eq(@mp3.add_song(@song))
+    end
+  end
+  
   
 end
