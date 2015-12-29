@@ -4,4 +4,8 @@ class Mp3
   def initialize
     @tracks = {}
   end
+  
+  def add_song(song)
+    @tracks[song.title] = song
+  end
 end

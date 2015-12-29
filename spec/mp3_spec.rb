@@ -20,7 +20,8 @@ RSpec.describe Mp3 do
   
   describe "#add_song" do 
     it "Adds a song to the mp3 tracks hash" do 
-      expect(@mp3.tracks).to eq(@mp3.add_song(@song))
+      @mp3.add_song(@song)
+      expect(@mp3.tracks).to have_key("Title")
     end
   end
   
